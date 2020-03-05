@@ -1,14 +1,13 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int h;
+
+void check_input(void);
+
 int main(void)
 {
-    int h;
-
-    do
-    {
-        h = get_int("Enter a number between 1 and 8\n");
-    } while (h < 1 || h > 8);
+    check_input();
 
     for (int i = 0; i < h; i++)
     {
@@ -28,4 +27,13 @@ int main(void)
         }
         printf("\n");
     };
+};
+
+void check_input(void)
+{
+    do
+    {
+        h = get_int("Enter a number between 1 and 8\n");
+    } 
+    while (h < 1 || h > 8);
 };
