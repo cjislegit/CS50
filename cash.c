@@ -8,6 +8,7 @@ int round_change(void);
 
 int main(void)
 {
+    int num_coins = 0;
     ask_for_Change();
     int coins = round_change();
 }
